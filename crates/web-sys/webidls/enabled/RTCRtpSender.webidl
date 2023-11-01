@@ -59,11 +59,11 @@ dictionary RTCRtpCodecParameters {
   DOMString      sdpFmtpLine;
 };
 
-dictionary RTCRtpParameters {
-  sequence<RTCRtpEncodingParameters>        encodings;
-  sequence<RTCRtpHeaderExtensionParameters> headerExtensions;
-  RTCRtcpParameters                         rtcp;
-  sequence<RTCRtpCodecParameters>           codecs;
+interface RTCRtpParameters {
+  attribute sequence<RTCRtpEncodingParameters>        encodings;
+  attribute sequence<RTCRtpHeaderExtensionParameters> headerExtensions;
+  attribute RTCRtcpParameters                         rtcp;
+  attribute sequence<RTCRtpCodecParameters>           codecs;
 };
 
 [Pref="media.peerconnection.enabled",

@@ -4,87 +4,70 @@ use super::*;
 use wasm_bindgen::prelude::*;
 #[wasm_bindgen]
 extern "C" {
-    # [wasm_bindgen (extends = :: js_sys :: Object , js_name = RTCRtpParameters)]
+    # [wasm_bindgen (extends = :: js_sys :: Object , js_name = RTCRtpParameters , typescript_type = "RTCRtpParameters")]
     #[derive(Debug, Clone, PartialEq, Eq)]
-    #[doc = "The `RtcRtpParameters` dictionary."]
+    #[doc = "The `RtcRtpParameters` class."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpParameters`*"]
     pub type RtcRtpParameters;
-}
-impl RtcRtpParameters {
-    #[doc = "Construct a new `RtcRtpParameters`."]
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpParameters" , js_name = encodings)]
+    #[doc = "Getter for the `encodings` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters/encodings)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpParameters`*"]
-    pub fn new() -> Self {
-        #[allow(unused_mut)]
-        let mut ret: Self = ::wasm_bindgen::JsCast::unchecked_into(::js_sys::Object::new());
-        ret
-    }
-    #[doc = "Change the `codecs` field of this object."]
+    pub fn encodings(this: &RtcRtpParameters) -> ::js_sys::Array;
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpParameters" , js_name = encodings)]
+    #[doc = "Setter for the `encodings` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters/encodings)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpParameters`*"]
-    pub fn codecs(&mut self, val: &::wasm_bindgen::JsValue) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r =
-            ::js_sys::Reflect::set(self.as_ref(), &JsValue::from("codecs"), &JsValue::from(val));
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[doc = "Change the `encodings` field of this object."]
+    pub fn set_encodings(this: &RtcRtpParameters, value: &::wasm_bindgen::JsValue);
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpParameters" , js_name = headerExtensions)]
+    #[doc = "Getter for the `headerExtensions` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters/headerExtensions)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpParameters`*"]
-    pub fn encodings(&mut self, val: &::wasm_bindgen::JsValue) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(
-            self.as_ref(),
-            &JsValue::from("encodings"),
-            &JsValue::from(val),
-        );
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[doc = "Change the `headerExtensions` field of this object."]
+    pub fn header_extensions(this: &RtcRtpParameters) -> ::js_sys::Array;
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpParameters" , js_name = headerExtensions)]
+    #[doc = "Setter for the `headerExtensions` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters/headerExtensions)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpParameters`*"]
-    pub fn header_extensions(&mut self, val: &::wasm_bindgen::JsValue) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(
-            self.as_ref(),
-            &JsValue::from("headerExtensions"),
-            &JsValue::from(val),
-        );
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
+    pub fn set_header_extensions(this: &RtcRtpParameters, value: &::wasm_bindgen::JsValue);
     #[cfg(feature = "RtcRtcpParameters")]
-    #[doc = "Change the `rtcp` field of this object."]
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpParameters" , js_name = rtcp)]
+    #[doc = "Getter for the `rtcp` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters/rtcp)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtcpParameters`, `RtcRtpParameters`*"]
-    pub fn rtcp(&mut self, val: &RtcRtcpParameters) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(self.as_ref(), &JsValue::from("rtcp"), &JsValue::from(val));
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-}
-impl Default for RtcRtpParameters {
-    fn default() -> Self {
-        Self::new()
-    }
+    pub fn rtcp(this: &RtcRtpParameters) -> RtcRtcpParameters;
+    #[cfg(feature = "RtcRtcpParameters")]
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpParameters" , js_name = rtcp)]
+    #[doc = "Setter for the `rtcp` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters/rtcp)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtcpParameters`, `RtcRtpParameters`*"]
+    pub fn set_rtcp(this: &RtcRtpParameters, value: &RtcRtcpParameters);
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpParameters" , js_name = codecs)]
+    #[doc = "Getter for the `codecs` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters/codecs)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpParameters`*"]
+    pub fn codecs(this: &RtcRtpParameters) -> ::js_sys::Array;
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpParameters" , js_name = codecs)]
+    #[doc = "Setter for the `codecs` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters/codecs)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpParameters`*"]
+    pub fn set_codecs(this: &RtcRtpParameters, value: &::wasm_bindgen::JsValue);
 }
