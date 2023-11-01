@@ -29,15 +29,15 @@ dictionary RTCFecParameters {
 };
 
 interface RTCRtpEncodingParameters {
-  readonly unsigned long            ssrc;
-  RTCRtxParameters         rtx;
-  RTCFecParameters         fec;
-  boolean                  active;
-  RTCPriorityType          priority;
-  unsigned long            maxBitrate;
-  RTCDegradationPreference degradationPreference = "balanced";
-  DOMString                rid;
-  float                    scaleResolutionDownBy = 1.0;
+  readonly attribute unsigned long   ssrc;
+  attribute RTCRtxParameters         rtx;
+  attribute RTCFecParameters         fec;
+  attribute boolean                  active;
+  attribute RTCPriorityType          priority;
+  attribute unsigned long            maxBitrate;
+  attribute RTCDegradationPreference degradationPreference;
+  attribute DOMString                rid;
+  attribute float                    scaleResolutionDownBy;
 };
 
 dictionary RTCRtpHeaderExtensionParameters {
