@@ -28,8 +28,8 @@ dictionary RTCFecParameters {
   unsigned long ssrc;
 };
 
-dictionary RTCRtpEncodingParameters {
-  unsigned long            ssrc;
+interface RTCRtpEncodingParameters {
+  readonly unsigned long            ssrc;
   RTCRtxParameters         rtx;
   RTCFecParameters         fec;
   boolean                  active;

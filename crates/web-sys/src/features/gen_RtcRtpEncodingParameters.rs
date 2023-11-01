@@ -4,163 +4,142 @@ use super::*;
 use wasm_bindgen::prelude::*;
 #[wasm_bindgen]
 extern "C" {
-    # [wasm_bindgen (extends = :: js_sys :: Object , js_name = RTCRtpEncodingParameters)]
+    # [wasm_bindgen (extends = :: js_sys :: Object , js_name = RTCRtpEncodingParameters , typescript_type = "RTCRtpEncodingParameters")]
     #[derive(Debug, Clone, PartialEq, Eq)]
-    #[doc = "The `RtcRtpEncodingParameters` dictionary."]
+    #[doc = "The `RtcRtpEncodingParameters` class."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
     pub type RtcRtpEncodingParameters;
-}
-impl RtcRtpEncodingParameters {
-    #[doc = "Construct a new `RtcRtpEncodingParameters`."]
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = ssrc)]
+    #[doc = "Getter for the `ssrc` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/ssrc)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
-    pub fn new() -> Self {
-        #[allow(unused_mut)]
-        let mut ret: Self = ::wasm_bindgen::JsCast::unchecked_into(::js_sys::Object::new());
-        ret
-    }
-    #[doc = "Change the `active` field of this object."]
-    #[doc = ""]
-    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
-    pub fn active(&mut self, val: bool) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r =
-            ::js_sys::Reflect::set(self.as_ref(), &JsValue::from("active"), &JsValue::from(val));
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[cfg(feature = "RtcDegradationPreference")]
-    #[doc = "Change the `degradationPreference` field of this object."]
-    #[doc = ""]
-    #[doc = "*This API requires the following crate features to be activated: `RtcDegradationPreference`, `RtcRtpEncodingParameters`*"]
-    pub fn degradation_preference(&mut self, val: RtcDegradationPreference) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(
-            self.as_ref(),
-            &JsValue::from("degradationPreference"),
-            &JsValue::from(val),
-        );
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[cfg(feature = "RtcFecParameters")]
-    #[doc = "Change the `fec` field of this object."]
-    #[doc = ""]
-    #[doc = "*This API requires the following crate features to be activated: `RtcFecParameters`, `RtcRtpEncodingParameters`*"]
-    pub fn fec(&mut self, val: &RtcFecParameters) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(self.as_ref(), &JsValue::from("fec"), &JsValue::from(val));
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[doc = "Change the `maxBitrate` field of this object."]
-    #[doc = ""]
-    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
-    pub fn max_bitrate(&mut self, val: u32) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(
-            self.as_ref(),
-            &JsValue::from("maxBitrate"),
-            &JsValue::from(val),
-        );
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[cfg(feature = "RtcPriorityType")]
-    #[doc = "Change the `priority` field of this object."]
-    #[doc = ""]
-    #[doc = "*This API requires the following crate features to be activated: `RtcPriorityType`, `RtcRtpEncodingParameters`*"]
-    pub fn priority(&mut self, val: RtcPriorityType) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(
-            self.as_ref(),
-            &JsValue::from("priority"),
-            &JsValue::from(val),
-        );
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[doc = "Change the `rid` field of this object."]
-    #[doc = ""]
-    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
-    pub fn rid(&mut self, val: &str) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(self.as_ref(), &JsValue::from("rid"), &JsValue::from(val));
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
+    pub fn ssrc(this: &RtcRtpEncodingParameters) -> u32;
     #[cfg(feature = "RtcRtxParameters")]
-    #[doc = "Change the `rtx` field of this object."]
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = rtx)]
+    #[doc = "Getter for the `rtx` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/rtx)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`, `RtcRtxParameters`*"]
-    pub fn rtx(&mut self, val: &RtcRtxParameters) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(self.as_ref(), &JsValue::from("rtx"), &JsValue::from(val));
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[doc = "Change the `scaleResolutionDownBy` field of this object."]
+    pub fn rtx(this: &RtcRtpEncodingParameters) -> RtcRtxParameters;
+    #[cfg(feature = "RtcRtxParameters")]
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpEncodingParameters" , js_name = rtx)]
+    #[doc = "Setter for the `rtx` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/rtx)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`, `RtcRtxParameters`*"]
+    pub fn set_rtx(this: &RtcRtpEncodingParameters, value: &RtcRtxParameters);
+    #[cfg(feature = "RtcFecParameters")]
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = fec)]
+    #[doc = "Getter for the `fec` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/fec)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcFecParameters`, `RtcRtpEncodingParameters`*"]
+    pub fn fec(this: &RtcRtpEncodingParameters) -> RtcFecParameters;
+    #[cfg(feature = "RtcFecParameters")]
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpEncodingParameters" , js_name = fec)]
+    #[doc = "Setter for the `fec` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/fec)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcFecParameters`, `RtcRtpEncodingParameters`*"]
+    pub fn set_fec(this: &RtcRtpEncodingParameters, value: &RtcFecParameters);
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = active)]
+    #[doc = "Getter for the `active` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/active)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
-    pub fn scale_resolution_down_by(&mut self, val: f32) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(
-            self.as_ref(),
-            &JsValue::from("scaleResolutionDownBy"),
-            &JsValue::from(val),
-        );
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-    #[doc = "Change the `ssrc` field of this object."]
+    pub fn active(this: &RtcRtpEncodingParameters) -> bool;
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpEncodingParameters" , js_name = active)]
+    #[doc = "Setter for the `active` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/active)"]
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
-    pub fn ssrc(&mut self, val: u32) -> &mut Self {
-        use wasm_bindgen::JsValue;
-        let r = ::js_sys::Reflect::set(self.as_ref(), &JsValue::from("ssrc"), &JsValue::from(val));
-        debug_assert!(
-            r.is_ok(),
-            "setting properties should never fail on our dictionary objects"
-        );
-        let _ = r;
-        self
-    }
-}
-impl Default for RtcRtpEncodingParameters {
-    fn default() -> Self {
-        Self::new()
-    }
+    pub fn set_active(this: &RtcRtpEncodingParameters, value: bool);
+    #[cfg(feature = "RtcPriorityType")]
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = priority)]
+    #[doc = "Getter for the `priority` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/priority)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcPriorityType`, `RtcRtpEncodingParameters`*"]
+    pub fn priority(this: &RtcRtpEncodingParameters) -> RtcPriorityType;
+    #[cfg(feature = "RtcPriorityType")]
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpEncodingParameters" , js_name = priority)]
+    #[doc = "Setter for the `priority` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/priority)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcPriorityType`, `RtcRtpEncodingParameters`*"]
+    pub fn set_priority(this: &RtcRtpEncodingParameters, value: RtcPriorityType);
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = maxBitrate)]
+    #[doc = "Getter for the `maxBitrate` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    pub fn max_bitrate(this: &RtcRtpEncodingParameters) -> u32;
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpEncodingParameters" , js_name = maxBitrate)]
+    #[doc = "Setter for the `maxBitrate` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    pub fn set_max_bitrate(this: &RtcRtpEncodingParameters, value: u32);
+    #[cfg(feature = "RtcDegradationPreference")]
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = degradationPreference)]
+    #[doc = "Getter for the `degradationPreference` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/degradationPreference)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDegradationPreference`, `RtcRtpEncodingParameters`*"]
+    pub fn degradation_preference(this: &RtcRtpEncodingParameters) -> RtcDegradationPreference;
+    #[cfg(feature = "RtcDegradationPreference")]
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpEncodingParameters" , js_name = degradationPreference)]
+    #[doc = "Setter for the `degradationPreference` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/degradationPreference)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcDegradationPreference`, `RtcRtpEncodingParameters`*"]
+    pub fn set_degradation_preference(
+        this: &RtcRtpEncodingParameters,
+        value: RtcDegradationPreference,
+    );
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = rid)]
+    #[doc = "Getter for the `rid` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/rid)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    pub fn rid(this: &RtcRtpEncodingParameters) -> String;
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpEncodingParameters" , js_name = rid)]
+    #[doc = "Setter for the `rid` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/rid)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    pub fn set_rid(this: &RtcRtpEncodingParameters, value: &str);
+    # [wasm_bindgen (structural , method , getter , js_class = "RTCRtpEncodingParameters" , js_name = scaleResolutionDownBy)]
+    #[doc = "Getter for the `scaleResolutionDownBy` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    pub fn scale_resolution_down_by(this: &RtcRtpEncodingParameters) -> f32;
+    # [wasm_bindgen (structural , method , setter , js_class = "RTCRtpEncodingParameters" , js_name = scaleResolutionDownBy)]
+    #[doc = "Setter for the `scaleResolutionDownBy` field of this object."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    pub fn set_scale_resolution_down_by(this: &RtcRtpEncodingParameters, value: f32);
 }
