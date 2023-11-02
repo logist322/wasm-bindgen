@@ -142,4 +142,11 @@ extern "C" {
     #[doc = ""]
     #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
     pub fn set_scale_resolution_down_by(this: &RtcRtpEncodingParameters, value: f32);
+    #[wasm_bindgen(catch, constructor, js_class = "RTCRtpEncodingParameters")]
+    #[doc = "The `new RtcRtpEncodingParameters(..)` constructor, creating a new instance of `RtcRtpEncodingParameters`."]
+    #[doc = ""]
+    #[doc = "[MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/RTCRtpEncodingParameters)"]
+    #[doc = ""]
+    #[doc = "*This API requires the following crate features to be activated: `RtcRtpEncodingParameters`*"]
+    pub fn new() -> Result<RtcRtpEncodingParameters, JsValue>;
 }

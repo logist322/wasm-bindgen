@@ -28,6 +28,7 @@ dictionary RTCFecParameters {
   unsigned long ssrc;
 };
 
+[Constructor]
 interface RTCRtpEncodingParameters {
   readonly attribute unsigned long   ssrc;
   attribute RTCRtxParameters         rtx;
